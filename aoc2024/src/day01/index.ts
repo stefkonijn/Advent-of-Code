@@ -35,7 +35,21 @@ const part1 = (rawInput: string) => {
 
 const part2 = (rawInput: string) => {
   // const input = parseInput(rawInput);
+  const input = parseInput(`98442   10520
+15717   73514
+20342   72228
+13498   75812`);
 
+  const leftValues: number[] = [];
+  const rightValues: number[] = [];
+
+  input.split("\n").forEach((line) => {
+    const [left, right] = line.split(/\s+/).map(Number);
+    // console.log(left);
+    leftValues.push(left);
+    rightValues.push(right);
+  });
+  //foreach value in left list, check if count how many times it is in right list
   return;
 };
 
